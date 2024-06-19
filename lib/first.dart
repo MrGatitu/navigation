@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './second.dart';
 
 class First extends StatelessWidget {
   const First({super.key});
@@ -13,7 +14,10 @@ class First extends StatelessWidget {
           ),
           body: Center(
             child: ElevatedButton(
-              onPressed: (){},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Second()));
+              },
               child: Text('First Page'),
             ),
           ),
